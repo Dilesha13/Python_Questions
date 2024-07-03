@@ -9,5 +9,5 @@ def count_words(file_path: str) -> int:
         return 0
 
 # Example usage:
-file_path = 'C:/Users/Tharushi/IIT/IIT/2nd yr/Python/problem_3/textfile.txt'
+file_path = 'problem_3/textfile.txt'
 print(count_words(file_path))  # Update this line with the correct path

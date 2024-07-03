@@ -1,5 +1,5 @@
 def get_balance(account_number: str) -> float:
-    with open('C:/Users/Tharushi/IIT/IIT/2nd yr/Python/problem_5/accounts.txt', 'r') as file:
+    with open('problem_5/accounts.txt', 'r') as file:
         for line in file:
             acc_num, balance = line.strip().split(',')
             if acc_num == account_number:
@@ -9,7 +9,7 @@ def get_balance(account_number: str) -> float:
 def update_account(account_number: str, balance: float):
     lines = []
     found = False
-    with open('C:/Users/Tharushi/IIT/IIT/2nd yr/Python/problem_5/accounts.txt', 'r') as file:
+    with open('problem_5/accounts.txt', 'r') as file:
         for line in file:
             acc_num, bal = line.strip().split(',')
             if acc_num == account_number:
@@ -19,7 +19,7 @@ def update_account(account_number: str, balance: float):
                 lines.append(line)
     if not found:
         lines.append(f"{account_number},{balance}\n")
-    with open('C:/Users/Tharushi/IIT/IIT/2nd yr/Python/problem_5/accounts.txt', 'w') as file:
+    with open('problem_5/accounts.txt', 'w') as file:
         file.writelines(lines)
 
 def deposit(account_number: str, amount: float):
